@@ -1,7 +1,11 @@
 {
-    "name": "BETAGoogleSearchXIV",
+    "name": "GoogleSearchXIV",
     "author": "IDAoADI(Bootloopy)",
     "options": [
+        {
+            "type": "title",
+            "text": "Version 1.0.1"
+        },
         {
             "type": "title",
             "text": "Search Bar Elements"
