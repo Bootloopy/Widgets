@@ -1,9 +1,0 @@
-Package: com.isaac19197.s10inspired
-Version: 1.0.0
-Name: S10Inspired
-Section: Widgets
-Depends: com.junesiphone.xeninfo
-Description: Requires XenInfo to work. A beautiful S10-like homescreen widget for iOS 11.0-12.x.
-Architecture: iphoneos-arm
-Author: Isaac (isaac19197) <isaac19197@yahoo.com>
-Maintainer: Isaac (isaac19197) <isaac19197@yahoo.com>
