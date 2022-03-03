@@ -173,17 +173,17 @@ function setSearchBarIconColor() {
     canvas.height = 500;
     image = searchBarIcon;
     ctx.drawImage(image, 0, 0);
-    var imgd = ctx.getImageData(0, 0, 500, 500),
-        pix = imgd.data,
-        uniqueColor = [red, green, blue];
+    var imageData = ctx.getImageData(0, 0, 500, 500),
+        picture = imageData.data,
+        rgb = [red, green, blue];
 
-    for (var i = 0, n = pix.length; i < n; i += 4) {
-        pix[i] = uniqueColor[0];
-        pix[i + 1] = uniqueColor[1];
-        pix[i + 2] = uniqueColor[2];
+    for (var i = 0, n = picture.length; i < n; i += 4) {
+        picture[i] = rgb[0];
+        picture[i + 1] = rgb[1];
+        picture[i + 2] = rgb[2];
     }
 
-    ctx.putImageData(imgd, 0, 0);
+    ctx.putImageData(imageData, 0, 0);
     searchBarIcon.src = canvas.toDataURL("image/png");
 }
 
@@ -200,17 +200,17 @@ function setSearchBarMicIconColor() {
     canvas.height = 717;
     image = searchBarMicIcon;
     ctx.drawImage(image, 0, 0);
-    var imgd = ctx.getImageData(0, 0, 500, 717),
-        pix = imgd.data,
-        uniqueColor = [red, green, blue];
+    var imageData = ctx.getImageData(0, 0, 500, 717),
+        picture = imageData.data,
+        rgb = [red, green, blue];
 
-    for (var i = 0, n = pix.length; i < n; i += 4) {
-        pix[i] = uniqueColor[0];
-        pix[i + 1] = uniqueColor[1];
-        pix[i + 2] = uniqueColor[2];
+    for (var i = 0, n = picture.length; i < n; i += 4) {
+        picture[i] = rgb[0];
+        picture[i + 1] = rgb[1];
+        picture[i + 2] = rgb[2];
     }
 
-    ctx.putImageData(imgd, 0, 0);
+    ctx.putImageData(imageData, 0, 0);
     searchBarMicIcon.src = canvas.toDataURL("image/png");
 }
 
@@ -227,17 +227,17 @@ function setLightSearchBarIconColor() {
     canvas.height = 500;
     image = searchBarIcon;
     ctx.drawImage(image, 0, 0);
-    var imgd = ctx.getImageData(0, 0, 500, 500),
-        pix = imgd.data,
-        uniqueColor = [red, green, blue];
+    var imageData = ctx.getImageData(0, 0, 500, 500),
+        picture = imageData.data,
+        rgb = [red, green, blue];
 
-    for (var i = 0, n = pix.length; i < n; i += 4) {
-        pix[i] = uniqueColor[0];
-        pix[i + 1] = uniqueColor[1];
-        pix[i + 2] = uniqueColor[2];
+    for (var i = 0, n = picture.length; i < n; i += 4) {
+        picture[i] = rgb[0];
+        picture[i + 1] = rgb[1];
+        picture[i + 2] = rgb[2];
     }
 
-    ctx.putImageData(imgd, 0, 0);
+    ctx.putImageData(imageData, 0, 0);
     searchBarIcon.src = canvas.toDataURL("image/png");
 }
 
@@ -254,17 +254,17 @@ function setLightSearchBarMicIconColor() {
     canvas.height = 717;
     image = searchBarMicIcon;
     ctx.drawImage(image, 0, 0);
-    var imgd = ctx.getImageData(0, 0, 500, 717),
-        pix = imgd.data,
-        uniqueColor = [red, green, blue];
+    var imageData = ctx.getImageData(0, 0, 500, 717),
+        picture = imageData.data,
+        rgb = [red, green, blue];
 
-    for (var i = 0, n = pix.length; i < n; i += 4) {
-        pix[i] = uniqueColor[0];
-        pix[i + 1] = uniqueColor[1];
-        pix[i + 2] = uniqueColor[2];
+    for (var i = 0, n = picture.length; i < n; i += 4) {
+        picture[i] = rgb[0];
+        picture[i + 1] = rgb[1];
+        picture[i + 2] = rgb[2];
     }
 
-    ctx.putImageData(imgd, 0, 0);
+    ctx.putImageData(imageData, 0, 0);
     searchBarMicIcon.src = canvas.toDataURL("image/png");
 }
 
@@ -281,17 +281,17 @@ function setDarkSearchBarIconColor() {
     canvas.height = 500;
     image = searchBarIcon;
     ctx.drawImage(image, 0, 0);
-    var imgd = ctx.getImageData(0, 0, 500, 500),
-        pix = imgd.data,
-        uniqueColor = [red, green, blue];
+    var imageData = ctx.getImageData(0, 0, 500, 500),
+        picture = imageData.data,
+        rgb = [red, green, blue];
 
-    for (var i = 0, n = pix.length; i < n; i += 4) {
-        pix[i] = uniqueColor[0];
-        pix[i + 1] = uniqueColor[1];
-        pix[i + 2] = uniqueColor[2];
+    for (var i = 0, n = picture.length; i < n; i += 4) {
+        picture[i] = rgb[0];
+        picture[i + 1] = rgb[1];
+        picture[i + 2] = rgb[2];
     }
 
-    ctx.putImageData(imgd, 0, 0);
+    ctx.putImageData(imageData, 0, 0);
     searchBarIcon.src = canvas.toDataURL("image/png");
 }
 
@@ -308,16 +308,16 @@ function setDarkSearchBarMicIconColor() {
     canvas.height = 717;
     image = searchBarMicIcon;
     ctx.drawImage(image, 0, 0);
-    var imgd = ctx.getImageData(0, 0, 500, 717),
-        pix = imgd.data,
-        uniqueColor = [red, green, blue];
+    var imageData = ctx.getImageData(0, 0, 500, 717),
+        picture = imageData.data,
+        rgb = [red, green, blue];
 
-    for (var i = 0, n = pix.length; i < n; i += 4) {
-        pix[i] = uniqueColor[0];
-        pix[i + 1] = uniqueColor[1];
-        pix[i + 2] = uniqueColor[2];
+    for (var i = 0, n = picture.length; i < n; i += 4) {
+        picture[i] = rgb[0];
+        picture[i + 1] = rgb[1];
+        picture[i + 2] = rgb[2];
     }
 
-    ctx.putImageData(imgd, 0, 0);
+    ctx.putImageData(imageData, 0, 0);
     searchBarMicIcon.src = canvas.toDataURL("image/png");
 }
