@@ -1,0 +1,126 @@
+Package: com.isaac19197.OGAppleLogo-i6-9
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Isaac (isaac19197) <isaac19197@yahoo.com>
+Filename: ./debs/com.isaac19197.ogapplelogo-i6-9_1.0_iphoneos-arm.deb
+<<<<<<< HEAD
+Size: 14406
+MD5sum: 668eb97bde9bec709285fc25a52d00e3
+SHA1: 727c04870a82bae4bc507136d75bc7b0c7d14ade
+SHA256: ee7a61d8fd738fc6e34bfbd9724d744f49a769f120b17c489e9b88619e9d7506
+=======
+Size: 14412
+MD5sum: 3812a803eea1722b1fd1b078c0bccd63
+SHA1: ed925209c07bf1bb1d9b0e651d4e81f4b9e3c337
+SHA256: 772eeebecdcbd99e8bc8f1ae522b0d8d9b0693c3ad0e1b054b9f8583719db56f
+>>>>>>> 1c4b6985eb8398958d13f970a463477946278f5f
+Section: Themes
+Description: Retro Apple logo respring for the iPhone 6.
+Author: Isaac (isaac19197) <isaac19197@yahoo.com>
+Name: OGAppleLogo-i6-9
+
+Package: com.isaac19197.SpoofCard
+Version: 10.4.0
+Architecture: iphoneos-arm
+Maintainer: Isaac (isaac19197) <isaac19197@yahoo.com>
+Filename: ./debs/com.isaac19197.spoofcard_10.4.0_iphoneos-arm.deb
+<<<<<<< HEAD
+Size: 9785014
+MD5sum: f086fd97c54bd5e76d2eed178582a238
+SHA1: 4e606dcbd7c7dec41ecb9a224c6bcc1b1a2016b9
+SHA256: 783b501205c3ae3cfb97d6cce016383339a3fe80cc1e9e74b911f2b8654e0b2a
+=======
+Size: 9785048
+MD5sum: f4d8bbe8771c6b4ed3d7da555647f126
+SHA1: bde9a5f7665f5bef55eb85eba64c389989f442c5
+SHA256: cd07b0f3cad3c61ee26331f0ad7855d70df78bb70f100fc41413232ded79eda6
+>>>>>>> 1c4b6985eb8398958d13f970a463477946278f5f
+Section: Tweaks
+Description: Used to make prank phone calls Please do not abuse this application.
+Author: Isaac (isaac19197) <isaac19197@yahoo.com>
+Name: SpoofCard
+
+Package: com.isaac19197.googlesearchxi
+Version: 1.0.3
+Architecture: iphoneos-arm
+Maintainer: Isaac (isaac19197) <isaac19197@yahoo.com>
+Depends: com.junesiphone.xeninfo
+Filename: ./debs/com.isaac19197.googlesearchxi_1.0.3_iphoneos-arm.deb
+<<<<<<< HEAD
+Size: 100520
+MD5sum: 842fa29d14c5e08130289d822b19d0b1
+SHA1: 9f1144fdd0335ae263fb74b38e770f6c96c31482
+SHA256: 51c22485594c944ef518649515a00b965b38495aac454b6dc53d01d5e123aea6
+=======
+Size: 100532
+MD5sum: 83970a74218cd0219e5c80573859a63f
+SHA1: 9319f3e610e6b885fb60c03bae9c2cb76de1b266
+SHA256: ae6f9ecfc887aadb11a9d0206a7415bca5857ee87bc8c68431e71aaf691b5739
+>>>>>>> 1c4b6985eb8398958d13f970a463477946278f5f
+Section: Widgets
+Description: Requires XenInfo to work. A Google search widget for iOS 11.0-11.x. To change what the bar looks like, type these into the bar: darkmode(); lightmode(); smallbar(); largebar(); translucentbar(); solidbar();. Credits to 0neGuyDev for the idea and inspiration.
+Author: Isaac (isaac19197) <isaac19197@yahoo.com>
+Name: GoogleSearchXI
+
+<<<<<<< HEAD
+Package: com.isaac19197.s10inspired
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: Isaac (isaac19197) <isaac19197@yahoo.com>
+Depends: com.junesiphone.xeninfo
+Filename: ./debs/com.isaac19197.s10inspired_1.0.0_iphoneos-arm.deb
+Size: 1705030
+MD5sum: 53afc93ca1826c16fde223d6326d2884
+SHA1: bbb7c5b338daf2692ba2e99eeea96a8e39c00c2e
+SHA256: 46c45cff48a0fa8c10967b3a0c8f01f5b04d4d5b9da7bad8526dd348f68f4ceb
+Section: Widgets
+Description: Requires XenInfo to work. A beautiful S10-like homescreen widget for iOS 11.0-12.x.
+Author: Isaac (isaac19197) <isaac19197@yahoo.com>
+Name: S10Inspired
+
+=======
+>>>>>>> 1c4b6985eb8398958d13f970a463477946278f5f
+Package: com.isaac19197.s9inspiredls
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: Isaac (isaac19197) <isaac19197@yahoo.com>
+Depends: com.junesiphone.xeninfo
+Filename: ./debs/com.isaac19197.s9inspiredls_1.0.0_iphoneos-arm.deb
+<<<<<<< HEAD
+Size: 801348
+MD5sum: e1cee6e1262334e3efcec9b6aacaab90
+SHA1: a8a3e452b3ab007eb0c457fca629c08953f56891
+SHA256: a0cc2b5a123b6710ddf7088fe06b4bdb63d0c2f2127e659bdb37cbbad95e93c4
+=======
+Size: 801442
+MD5sum: b5024f84519b5ec18faced6cb101b5c3
+SHA1: 3137adb42a910347f45bb350f6af72eeb7b7b838
+SHA256: e82a399dcd9a8bbdaef2631aef203fd5d8e40738f0655f006c3e6302d13ca36a
+>>>>>>> 1c4b6985eb8398958d13f970a463477946278f5f
+Section: Widgets
+Description: Requires XenInfo to work. A beautiful S9-like lockscreen widget for iOS 11.0-11.x. Tap the widget to toggle between time and weather.
+Author: Isaac (isaac19197) <isaac19197@yahoo.com>
+Name: S9Inspired (Lockscreen)
+
+Package: com.isaac19197.s9inspiredsb
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: Isaac (isaac19197) <isaac19197@yahoo.com>
+Depends: com.junesiphone.xeninfo
+Filename: ./debs/com.isaac19197.s9inspiredsb_1.0.0_iphoneos-arm.deb
+<<<<<<< HEAD
+Size: 801342
+MD5sum: 716bb542881b70488f988e6d95e7a0d6
+SHA1: 24f16b07166af304edf39a698912e5ba5c04114e
+SHA256: 701dcfd533b2428c0e9bfac28eda0d7b8ff8706c37ea5713df04ce9c4f973f65
+=======
+Size: 801442
+MD5sum: 5dd313e3df0dffa5fe2a948a9880a742
+SHA1: c2c62a4aaf4671d225ea1d875068ecd405b38104
+SHA256: 05e42fd692fad90253306047d7b0e82d844c49404f04e424ab7c875656e87307
+>>>>>>> 1c4b6985eb8398958d13f970a463477946278f5f
+Section: Widgets
+Description: Requires XenInfo to work. A beautiful S9-like homescreen widget for iOS 11.0-11.x. Tap the widget to toggle between time and weather.
+Author: Isaac (isaac19197) <isaac19197@yahoo.com>
+Name: S9Inspired (Homescreen)
+

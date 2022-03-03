@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>S9Inspired</title>
+    <style>
+        @font-face {
+            font-family: SamsungOne;
+            src: url(fonts/SamsungOne-400.ttf);
+        }
+
+        body {
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: -50px;
+            margin-bottom: 0px;
+            overflow-x: hidden;
+            background-color: transparent;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Start Flex */
+
+        .makeFlexible {
+            display: flex;
+        }
+
+        .flexAttr1 {
+            height: 200px;
+			margin-right: 136px;
+			position: relative;
+        }
+
+        .flexAttr2 {
+            width: 100%;
+        }
+
+        .makeFlexible:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* End Flex */
+
+        /* js ID's */
+
+        #hourMinute {
+            position: absolute;
+            margin-top: 230px;
+            padding-right: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: white;
+            font-family: "SamsungOne";
+            font-size: 30pt;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #date {
+            position: absolute;
+            margin-top: 280px;
+            padding-right: 4px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: white;
+            font-family: "SamsungOne";
+            font-size: 20pt;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #icon {
+            margin-top: 228px;
+            padding-left: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            left: 1;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background-image: url('icons/2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 1.0;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #city {
+            position: absolute;
+            margin-top: 210px;
+            padding-left: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: white;
+            font-family: "SamsungOne";
+            font-size: 13pt;
+            width: 200px;
+            opacity: 1.0;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #locationIcon {
+            margin-top: 205px;
+            padding-right: 158px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            opacity: 1.0;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="makeFlexible">
+        <div class="flexAttr1 flexAttr2">
+            <div id="hourMinute"></div>
+            <div id="date"></div>
+            <div id="icon"></div>
+            <img id="locationIcon" src="images/location.png" alt="" />
+            <div id="city">Chicago</div>
+        </div>
+    </div>
+
+
+    <script src="js/clock.js"></script>
+
+    <script>
+        clock({
+            twentyfour: false,
+            padzero: true,
+            refresh: 1000,
+            success: function(clock) {
+                document.getElementById('hourMinute').innerHTML = clock.hour() + ':' + clock.minute();
+                document.getElementById('date').innerHTML = clock.sdaytext() + ',' + ' ' + clock.monthtext() + ' ' + clock.date();
+            }
+        });
+
+        //for icon ID//
+
+        var doc = document,
+            iconDiv = doc.getElementById('icon');
+
+        //weather//	
+
+        function mainUpdate(type) {
+            if (type == "weather") {
+
+                document.getElementById('city').innerHTML = weather.city;
+
+                iconDiv.style.backgroundImage = "url('icons/" + weather.conditionCode + ".png')";
+
+            }
+        }
+    </script>
+</body>
+
+</html>

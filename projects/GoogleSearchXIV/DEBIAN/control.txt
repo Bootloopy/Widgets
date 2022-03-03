@@ -1,0 +1,9 @@
+Package: com.isaac19197.googlesearchxi
+Version: 1.0.3
+Name: GoogleSearchXI
+Section: Widgets
+Depends: com.junesiphone.xeninfo
+Description: Requires XenInfo to work. A Google search widget for iOS 11.0-11.x. To change what the bar looks like, type these into the bar: darkmode(); lightmode(); smallbar(); largebar(); translucentbar(); solidbar();. Credits to 0neGuyDev for the idea and inspiration.
+Architecture: iphoneos-arm
+Author: Isaac (isaac19197) <isaac19197@yahoo.com>
+Maintainer: Isaac (isaac19197) <isaac19197@yahoo.com>

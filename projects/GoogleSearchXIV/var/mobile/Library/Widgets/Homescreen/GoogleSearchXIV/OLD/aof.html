@@ -1,0 +1,108 @@
+<html>
+<head>
+  <title>AOF Reunion Countdown Timer</title>
+  <style>
+  .countdown-font {
+    display:  block;
+    text-align:  center;
+    font-family: "Impact";
+    font-size: 90pt;
+    color: white;
+  }
+  .countdown-container {
+    display:  block;
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+    top: 50%;
+    left:  50%;
+    transform:  translate(-50%, -50%);
+    z-index: -10;
+  }
+  .countdown-data-container {
+    display:  inline-block;
+    position: relative;
+    margin:  auto;
+    background-color: #800000;
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+    z-index: -1;
+  }
+  #days {
+    display:  block;
+    position: absolute;
+    margin:  auto;
+    top: 50%;
+    left:  50%;
+    transform:  translate(-50%, -50%);
+    z-index: 10;
+  }
+  #hours {
+    display:  block;
+    position: absolute;
+    margin:  auto;
+    top: 50%;
+    left:  50%;
+    transform:  translate(-50%, -50%);
+    z-index: 10;
+  }
+  #minutes {
+    display:  block;
+    position: absolute;
+    margin:  auto;
+    top: 50%;
+    left:  50%;
+    transform:  translate(-50%, -50%);
+    z-index: 10;
+  }
+  </style>
+</head>
+<body>
+<div class="countdown-container">
+  <div class="countdown-data-container">
+    <p class="countdown-font" id="days"></p>
+  </div> 
+  <div class="countdown-data-container">
+    <p class="countdown-font" id="hours"></p>
+  </div>
+  <div class="countdown-data-container">  
+    <p class="countdown-font" id="minutes"></p>
+  </div>  
+</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("jun 3, 2022 7:0:0").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+ // + hours + "h "+ minutes + "m " + seconds + "s ";
+  document.getElementById("days").innerHTML = days + "d";
+  document.getElementById("hours").innerHTML = hours + "h";
+  document.getElementById("minutes").innerHTML = minutes + "m";
+
+
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("days").style.display = "XX";
+    document.getElementById("hours").innerHTML = "XX";
+    document.getElementById("minutes").style.display = "XX";
+  }
+}, 1000);
+</script>
+</body>
+</html>

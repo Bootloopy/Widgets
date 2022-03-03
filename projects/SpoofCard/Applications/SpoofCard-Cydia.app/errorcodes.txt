@@ -1,0 +1,23 @@
+Code        File                        Description
+-----------------------------------------------------------
+100         spoofcardAppDelegate.m      Error encoding translations.
+101         spoofcardAppDelegate.m      Error occurred json decoding the language file.  Loading translations aborted.
+102         ProductsScreen.m            No products were passed.  Setup products scroller aborted.
+103         PluginPicker.m              No plugin items are available.  PluginPicker aborting setup
+104         ProductsScreen.m            No recognized products are available to display.  Setup products scroller aborted.
+105         ProductsScreen.m            An error occurred processing a product. Skipping to the next product.
+106         RecordingsList.m            Error occurred attempting to delete recording
+107         spoofcardAppDelegate.m      Unable to locate the recording that was deleted
+108         RecordingsScreen.m          No recording URL was returned by the RecordingList
+109         RecordingsScreen.m          Unable to publicize recording because the SID could not be found
+110         spoofcardAppDelegate.m      No productID was passed for an in-app purchase
+111         spoofcardAppDelegate.m      Unable to finish transaction because the transaction was not found
+112         LoginViewController.m       No Facebook access token was returned
+113         LoginViewController.m       No Facebook UID was returned
+114         LoginViewController.m       No Resource->Credentials were returned
+115         LoginViewController.m       No Access Token was returned
+116         LoginViewController.m       No Access Token was passed
+117         spoofcardAppDelegate.m      Failed to process access token
+118         LoginViewController.m       Failed to process access token
+119         AccountScreen.m             No Facebook access token was returned
+120         SpoofCall.m                 No Access Code was returned
