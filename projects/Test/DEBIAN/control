@@ -1,5 +1,5 @@
 Package: com.bootloopy.test
-Version: 1.0.0
+Version: 1.0.1
 Name: GoogleSearchXIV
 Section: Widgets
 Depends:
@@ -7,4 +7,4 @@ Description: A Google search widget for iOS 14.0-14.x.
 Architecture: iphoneos-arm
 Author: Bootloopy (IDAoADI) <>
 Maintainer: Bootloopy (IDAoADI) <>
-Depiction: https://www.bootloopy.github.io/depictions/test/index.html
+Depiction: https://bootloopy.github.io/depictions/test/index.html
