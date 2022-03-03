@@ -1,0 +1,237 @@
+{
+    "name": "TESTGoogleSearchXIV",
+    "author": "IDAoADI(Bootloopy)",
+    "options": [
+        {
+            "type": "title",
+            "text": "Search Bar Elements"
+        },
+        {
+            "type": "color",
+            "default": "#FFFFFF",
+            "key": "searchbarcolor",
+            "text": "Search Bar Color"
+        },
+        {
+            "type": "comment",
+            "text": "Change the background color of the search bar."
+        },
+        {
+            "type": "color",
+            "default": "#000000",
+            "key": "searchbartextcolor",
+            "text": "Search Bar Text Color"
+        },
+        {
+            "type": "comment",
+            "text": "Change the text color of the search bar."
+        },
+        {
+            "type": "color",
+            "default": "#969AA1",
+            "key": "searchbarplaceholdertextcolor",
+            "text": "Search Bar Placeholder Text Color"
+        },
+        {
+            "type": "comment",
+            "text": "Change the color of the search bar placeholder text color."
+        },
+        {
+            "type": "switch",
+            "default": "false",
+            "key": "usesearchbariconcolor",
+            "text": "Custom Google Icon Color"
+        },
+        {
+            "type": "color",
+            "default": "#000000",
+            "key": "searchbariconcolor",
+            "text": "Google Icon Color"
+        },
+        {
+            "type": "comment",
+            "text": "Change the color of the Google icon color."
+        },
+        {
+            "type": "switch",
+            "default": "false",
+            "key": "usesearchbarmiciconcolor",
+            "text": "Custom Mic Icon Color"
+        },
+        {
+            "type": "color",
+            "default": "#000000",
+            "key": "searchbarmiciconcolor",
+            "text": "Mic Icon Color"
+        },
+        {
+            "type": "comment",
+            "text": "Change the color of the mic icon color."
+        },
+        {
+            "type": "page",
+            "text": "Dynamic Search Bar Options",
+            "options": [
+                {
+                    "type": "title",
+                    "text": "Dynamic Search Bar Elements"
+                },
+                {
+                    "type": "switch",
+                    "default": "false",
+                    "key": "dynamiccolorswitch",
+                    "text": "Use Dynamic Colors"
+                },
+                {
+                    "type": "comment",
+                    "text": "Change the color of the search bar with time."
+                },
+                {
+                    "type": "comment",
+                    "text": "* For dynamic colors to work properly, please turn on the automatic flip switch and set the time options accordingly in the Display & Brightness settings."
+                },
+                {
+                    "type": "color",
+                    "default": "#FFFFFF",
+                    "key": "lightsearchbarcolor",
+                    "text": "Light Search Bar Color"
+                },
+                {
+                    "type": "color",
+                    "default": "#303133",
+                    "key": "darksearchbarcolor",
+                    "text": "Dark Search Bar Color"
+                },
+                {
+                    "type": "comment",
+                    "text": "Change the background color of the search bar."
+                },
+                {
+                    "type": "color",
+                    "default": "#000000",
+                    "key": "lightsearchbartextcolor",
+                    "text": "Light Search Bar Text Color"
+                },
+                {
+                    "type": "color",
+                    "default": "#FFFFFF",
+                    "key": "darksearchbartextcolor",
+                    "text": "Dark Search Bar Text Color"
+                },
+                {
+                    "type": "comment",
+                    "text": "Change the text color of the search bar."
+                },
+                {
+                    "type": "color",
+                    "default": "#969AA1",
+                    "key": "lightsearchbarplaceholdertextcolor",
+                    "text": "Light Search Bar Placeholder Text Color"
+                },
+                {
+                    "type": "color",
+                    "default": "#969AA1",
+                    "key": "darksearchbarplaceholdertextcolor",
+                    "text": "Dark Search Bar Placeholder Text Color"
+                },
+                {
+                    "type": "comment",
+                    "text": "Change the color of the search bar placeholder text color."
+                },
+                {
+                    "type": "switch",
+                    "default": "false",
+                    "key": "usedynamicsearchbariconcolor",
+                    "text": "Dynamic Custom Google Icon Color"
+                },
+                {
+                    "type": "color",
+                    "default": "#000000",
+                    "key": "lightsearchbariconcolor",
+                    "text": "Light Google Icon Color"
+                },
+                {
+                    "type": "color",
+                    "default": "#000000",
+                    "key": "darksearchbariconcolor",
+                    "text": "Dark Google Icon Color"
+                },
+                {
+                    "type": "comment",
+                    "text": "Change the color of the Google icon color."
+                },
+                {
+                    "type": "switch",
+                    "default": "false",
+                    "key": "usedynamicsearchbarmiciconcolor",
+                    "text": "Dynamic Custom Mic Icon Color"
+                },
+                {
+                    "type": "color",
+                    "default": "#000000",
+                    "key": "lightsearchbarmiciconcolor",
+                    "text": "Light Mic Icon Color"
+                },
+                {
+                    "type": "color",
+                    "default": "#000000",
+                    "key": "darksearchbarmiciconcolor",
+                    "text": "Dark Mic Icon Color"
+                },
+                {
+                    "type": "comment",
+                    "text": "Change the color of the mic icon color."
+                },
+            ]
+        },
+        {
+            "type": "gap"
+        },
+        {
+            "type": "slider",
+            "min": 0.0,
+            "max": 1.0,
+            "text": "Search Bar Opacity",
+            "default": 1.0,
+            "key": "searchbaropacity"
+        },
+        {
+            "type": "comment",
+            "text": "Change the opacity of the search bar."
+        },
+        {
+            "type": "slider",
+            "min": 0.0,
+            "max": 1.0,
+            "text": "Search Bar Blur",
+            "default": 0.0,
+            "key": "searchbarblur"
+        },
+        {
+            "type": "comment",
+            "text": "Change the blur level of the search bar."
+        },
+        {
+            "type": "comment",
+            "text": "* Tapping on the Google logo will open your default browser to Google."
+        },
+        {
+            "type": "comment",
+            "text": "** In order to use the microphone, please make sure to download the Google Assistant app from the App Store."
+        },
+        {
+            "type": "comment",
+            "text": "*** To have Google Assistant launch and instantly listen, make sure to download InstantAssistant from the Packix repo."
+        },
+        {
+            "type": "link",
+            "url": "https://apps.apple.com/us/app/google-assistant/id1220976145",
+            "text": "Google Assistant"
+        },
+        {
+            "type": "link",
+            "url": "https://repo.packix.com/",
+            "text": "Packix Repository"
+        }
+    ]
+}
