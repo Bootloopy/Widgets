@@ -3,12 +3,12 @@ Version: 1.0.0-b1.0
 Architecture: iphoneos-arm
 Maintainer: Bootloopy (IDAoADI) <>
 Filename: ./debs/com.booloopy.googlesearchxiv_1.0.0-b1.0_iphoneos-arm.deb
-Size: 4806
-MD5sum: 55e7dea3ec844aa8abe93a1ca150a198
-SHA1: 149a3bf2fd95c26868c78ad735c7472ff3824261
-SHA256: 9e835e76beb72b5289dc6c816a6afb95b17b9e3b6833965c5ff57e065048c72e
+Size: 4774
+MD5sum: 56df14ec17671e4c91e2eba9d6eeee3c
+SHA1: 6e3516e4ac06f38429d29ce18f76565b068b811f
+SHA256: 25399d0ec80703ef377984286e5e03e2fb3eb04c56b2afa741e2d8c6fbe40be3
 Section: Widgets
-Description: Requires XenInfo to work. A Google search widget for iOS 14.0-14.x.
+Description: A Google search widget for iOS 14.0-14.x.
 Author: Bootloopy (IDAoADI) <>
 Name: GoogleSearchXIV
 
