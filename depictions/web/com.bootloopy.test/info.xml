@@ -1,0 +1,23 @@
+<package>
+    <id>com.bootloopy.test</id>
+    <name>Test Package</name>
+    <version>1.0.0</version>
+    <compatibility>
+        <firmware>
+            <miniOS>11.0</miniOS>
+            <maxiOS>14.8.1</maxiOS>
+            <otherVersions>unsupported</otherVersions>
+        </firmware>
+    </compatibility>
+    <dependencies></dependencies>
+    <descriptionlist>
+        <description>This is a test package.</description>
+    </descriptionlist>
+    <screenshots></screenshots>
+    <changelog>
+        <changes>
+            <version>1.0.0</version>
+            <change>Initial release</change>
+        </changes>
+    </changelog>
+</package>
