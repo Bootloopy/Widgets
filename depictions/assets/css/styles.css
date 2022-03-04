@@ -4,29 +4,29 @@ body {
 }
 
 h1 {
-	margin-left: 20px;
+	margin-left: 0px;
 	color: black;
 	font-family: 'Helvetica';
 	font-size: 20pt;
 }
 
 h2 {
-	margin-left: 20px;
+	margin-left: 0px;
 	color: black;
 	font-family: 'Helvetica';
 	font-size: 14pt;
 }
 
 h3 {
-	margin-left: 40px;
+	margin-left: 10px;
 	color: black;
 	font-family: 'Helvetica';
 	font-size: 12pt;
 }
 
 p {
-	margin-left: 40px;
-	width: 400px;
+	margin-left: 10px;
+	width: 100%;
 	color: black;
 	font-family: 'Helvetica';
 	font-size: 12pt;
@@ -48,7 +48,7 @@ img {
 
 .depictionContainer {
 	position: relative;
-	width: 50%;
+	width: 25%;
 	left: 50%;
 	transform: translateX(-50%);
 }
