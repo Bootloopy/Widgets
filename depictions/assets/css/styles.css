@@ -46,8 +46,23 @@ img {
 	transform: translateX(-50%);
 }
 
-.bullets {
+li {
+	position: relative;
+	width: 100%;
 	color: black;
-	font-family: 'Verdana';
-	font-size: 13.5pt;
+	font-family: 'Helvetica';
+	font-size: 12pt;
+	list-style-type: none;
+}
+
+li::before {
+	position: absolute;
+	top: -5.5px;
+	left: -15px;
+    font-size: 20pt;
+    content: "•";
+}
+
+.button {
+	border-radius: 25px;
 }
