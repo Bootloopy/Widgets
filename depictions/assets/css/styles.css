@@ -1,5 +1,8 @@
 body {
+	position: relative;
 	background-color: #FFFFFF;
+	margin: 0 auto !important;
+	width: 90%;
 	overflow-x: hidden;
 }
 
@@ -34,7 +37,7 @@ p {
 
 img {
 	position: relative;
-	width: 300px;
+	width: 80%;
 	height: auto;
 	left: 50%;
 	transform: translateX(-50%);
@@ -44,11 +47,4 @@ img {
 	color: black;
 	font-family: 'Verdana';
 	font-size: 13.5pt;
-}
-
-.depictionContainer {
-	position: relative;
-	width: 25%;
-	left: 50%;
-	transform: translateX(-50%);
 }
