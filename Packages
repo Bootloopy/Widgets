@@ -4,9 +4,9 @@ Architecture: iphoneos-arm
 Maintainer: Bootloopy (IDAoADI) <>
 Filename: ./debs/com.bootloopy.googlesearchxiv_1.0.2_iphoneos-arm.deb
 Size: 82500
-MD5sum: 2dd56100e6f5a4148fc2ca2bfb27c056
-SHA1: a8537bcb01a5df2cf8e0088163621f103283676d
-SHA256: d5f4a669ca37760c880e18c15363cbf9fb8989e0091d1b0adb0bb44dc54123ef
+MD5sum: 1c3a8f548496496898b6dd7ac5757cc2
+SHA1: 94b64019df00e9a8d586c7fb96f3004234dbdf36
+SHA256: 009ff5450c8d76a40212542b469f8455936a0d4c8b76fd51e374d09bb2c294bc
 Section: Widgets
 Description: A Google search widget for iOS 14.0-14.x.
 Author: Bootloopy (IDAoADI) <>
@@ -17,13 +17,13 @@ Version: 1.0.1
 Architecture: iphoneos-arm
 Maintainer: Bootloopy (IDAoADI) <>
 Filename: ./debs/com.bootloopy.test_1.0.1_iphoneos-arm.deb
-Size: 82520
-MD5sum: a08f2af8e0ab1c8488070b908b6b5e86
-SHA1: 3ca40c8be1c9b622a3803bc86858288aad2b2cbc
-SHA256: 46be56a35db73d434031240e8a1de6e27ca1f59a171ff41de7fe6bf0a5a423a0
+Size: 82534
+MD5sum: 796ce493ed3d444c9e7a9fe546dc02a6
+SHA1: 3993869d4c5600b58efeaf9ef19e5a43c5fe61c2
+SHA256: a93b83e8efaaf7256e76e71bff029c1d464d9d1a319ea53a79fc616ce9a00eba
 Section: Widgets
 Description: A Google search widget for iOS 14.0-14.x.
 Author: Bootloopy (IDAoADI) <>
-Depiction: https://bootloopy.github.io/depictions/test/index.html
+Depiction: https://bootloopy.github.io/depictions/projects/test/index.html
 Name: GoogleSearchXIV
 
