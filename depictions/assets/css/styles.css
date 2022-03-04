@@ -34,7 +34,7 @@ p {
 
 img {
 	position: relative;
-	width: 500px;
+	width: 300px;
 	height: auto;
 	left: 50%;
 	transform: translateX(-50%);
@@ -44,4 +44,11 @@ img {
 	color: black;
 	font-family: 'Verdana';
 	font-size: 13.5pt;
+}
+
+.depictionContainer {
+	position: relative;
+	width: 50%;
+	left: 50%;
+	transform: translateX(-50%);
 }
