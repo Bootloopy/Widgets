@@ -1,17 +1,47 @@
 body {
-	background-color: red;
+	background-color: #FFFFFF;
+	overflow-x: hidden;
 }
 
 h1 {
+	margin-left: 20px;
 	color: black;
 	font-family: 'Helvetica';
 	font-size: 20pt;
-	text-align: center;
 }
 
-p {
+h2 {
+	margin-left: 20px;
+	color: black;
+	font-family: 'Helvetica';
+	font-size: 14pt;
+}
+
+h3 {
+	margin-left: 40px;
 	color: black;
 	font-family: 'Helvetica';
 	font-size: 12pt;
-	text-align: center;
+}
+
+p {
+	margin-left: 40px;
+	width: 400px;
+	color: black;
+	font-family: 'Helvetica';
+	font-size: 12pt;
+}
+
+img {
+	position: relative;
+	width: 500px;
+	height: auto;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bullets {
+	color: black;
+	font-family: 'Verdana';
+	font-size: 13.5pt;
 }
