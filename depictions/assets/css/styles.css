@@ -62,7 +62,3 @@ li::before {
     font-size: 20pt;
     content: "•";
 }
-
-.button {
-	border-radius: 25px;
-}
