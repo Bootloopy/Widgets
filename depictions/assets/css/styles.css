@@ -62,3 +62,11 @@ li::before {
     font-size: 20pt;
     content: "•";
 }
+
+a {
+	margin-left: 10px;
+	width: 100%;
+	font-family: 'Helvetica';
+	font-size: 12pt;
+	text-decoration: underline;
+}
