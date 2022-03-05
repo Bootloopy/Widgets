@@ -64,9 +64,13 @@ li::before {
 }
 
 a {
-	margin-left: 10px;
 	width: 100%;
+	color: lightskyblue;
 	font-family: 'Helvetica';
 	font-size: 12pt;
 	text-decoration: underline;
+}
+
+#log {
+	display: none;
 }
