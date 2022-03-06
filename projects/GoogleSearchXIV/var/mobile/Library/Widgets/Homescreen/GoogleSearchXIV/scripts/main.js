@@ -9,12 +9,6 @@ var searchBarPlaceholderTextColor = config.searchbarplaceholdertextcolor.length 
 var searchBarIconColor = config.searchbariconcolor.length > 7 ? config.searchbariconcolor.substring(1, 7) : config.searchbariconcolor;
 var searchBarMicIconColor = config.searchbarmiciconcolor.length > 7 ? config.searchbarmiciconcolor.substring(1, 7) : config.searchbarmiciconcolor;
 //
-function loadLogos() {
-    searchBarIcon.src = base64SearchBarIcon;
-    searchBarMicIcon.src = base64SearchBarMicIcon;
-}
-loadLogos();
-//
 var dynamicSearchBar;
 var dynamicSearchBarLightBackgroundColor = config.lightsearchbarcolor.length > 7 ? config.lightsearchbarcolor.substring(0, 7) : config.lightsearchbarcolor;
 var dynamicSearchBarDarkBackgroundColor = config.darksearchbarcolor.length > 7 ? config.darksearchbarcolor.substring(0, 7) : config.darksearchbarcolor;
@@ -29,9 +23,6 @@ var dynamicDarkSearchBarMicIconColor = config.darksearchbarmiciconcolor.length >
 //
 var searchBarOpacity = (config.searchbaropacity * Math.pow(10, 2));
 var searchBarBlur = (config.searchbarblur * Math.pow(10, 2)) / 10;
-//
-searchBackground.style.webkitFilter = `opacity(${searchBarOpacity}%)`;
-searchBackground.style.webkitBackdropFilter = `blur(${searchBarBlur}px)`;
 
 window.onkeyup = keyup;
 
@@ -86,6 +77,25 @@ if (config.dynamiccolorswitch == true) {
 } else {
     setDefaultBar();
 }
+
+function loadIcons() {
+    searchBarIcon.src = base64SearchBarIcon;
+    searchBarMicIcon.src = base64SearchBarMicIcon;
+}
+
+loadIcons();
+
+function setSearchBarOpacity() {
+    searchBackground.style.webkitFilter = `opacity(${searchBarOpacity}%)`;
+}
+
+setSearchBarOpacity();
+
+function setSearchBarBlur() {
+    searchBackground.style.webkitBackdropFilter = `blur(${searchBarBlur}px)`;
+}
+
+setSearchBarBlur();
 
 function setDynamicLightBar() {
     searchBackground.style.backgroundColor = dynamicSearchBarLightBackgroundColor;
