@@ -3,7 +3,6 @@ body {
 	background-color: #FFFFFF;
 	margin: 0 auto !important;
 	width: 90%;
-	height: auto;
 	overflow-x: hidden;
 }
 
@@ -70,6 +69,10 @@ a {
 	font-family: 'Helvetica';
 	font-size: 12pt;
 	text-decoration: underline;
+}
+
+.content {
+	height: 100%;
 }
 
 #log {
