@@ -1,10 +1,10 @@
 {
     "name": "GoogleSearchXIV",
-    "author": "IDAoADI(Bootloopy)",
+    "author": "Bootloopy",
     "options": [
         {
             "type": "title",
-            "text": "Version 1.0.0"
+            "text": "Version 1.0.2"
         },
         {
             "type": "title",

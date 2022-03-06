@@ -1,3 +1,4 @@
+// GooglesearchXIV by Bootloopy
 var searchBar = document.getElementById("searchBar");
 var searchBackground = document.getElementById("searchBackground");
 var searchBarIcon = document.getElementById("searchBarIcon");
@@ -7,6 +8,9 @@ var searchBarTextColor = config.searchbartextcolor.length > 7 ? config.searchbar
 var searchBarPlaceholderTextColor = config.searchbarplaceholdertextcolor.length > 7 ? config.searchbarplaceholdertextcolor.substring(0, 7) : config.searchbarplaceholdertextcolor;
 var searchBarIconColor = config.searchbariconcolor.length > 7 ? config.searchbariconcolor.substring(1, 7) : config.searchbariconcolor;
 var searchBarMicIconColor = config.searchbarmiciconcolor.length > 7 ? config.searchbarmiciconcolor.substring(1, 7) : config.searchbarmiciconcolor;
+//
+searchBarIcon.src = base64SearchBarIcon;
+searchBarMicIcon.src = base64SearchBarMicIcon;
 //
 var dynamicSearchBar;
 var dynamicSearchBarLightBackgroundColor = config.lightsearchbarcolor.length > 7 ? config.lightsearchbarcolor.substring(0, 7) : config.lightsearchbarcolor;
@@ -22,68 +26,62 @@ var dynamicDarkSearchBarMicIconColor = config.darksearchbarmiciconcolor.length >
 //
 var searchBarOpacity = (config.searchbaropacity * Math.pow(10, 2));
 var searchBarBlur = (config.searchbarblur * Math.pow(10, 2)) / 10;
+//
+searchBackground.style.webkitFilter = `opacity(${searchBarOpacity}%)`;
+searchBackground.style.webkitBackdropFilter = `blur(${searchBarBlur}px)`;
 
-window.onload = function() {
+window.onkeyup = keyup;
 
-    window.onkeyup = keyup;
+var inputTextValue;
 
-    var inputTextValue;
+function keyup(e) {
+    inputTextValue = e.target.value;
 
-    function keyup(e) {
-        inputTextValue = e.target.value;
-
-        if (e.keyCode == 13) {
-            var correctValue = inputTextValue.replace(/\s+/g, '+');
-            window.location = "https://www.google.com/search?q=" + correctValue;
-            setTimeout(function() {
-                document.getElementById("searchBar").value = "";
-            }, 1000);
-        }
-    }
-
-    function tappedOnLogo() {
+    if (e.keyCode == 13) {
+        var correctValue = inputTextValue.replace(/\s+/g, '+');
+        window.location = "https://www.google.com/search?q=" + correctValue;
         setTimeout(function() {
             document.getElementById("searchBar").value = "";
         }, 1000);
-        window.location = "https://google.com";
+    }
+}
+
+function tappedOnLogo() {
+    setTimeout(function() {
+        document.getElementById("searchBar").value = "";
+    }, 1000);
+    window.location = "https://google.com";
+}
+
+searchBarIcon.addEventListener("touchstart", tappedOnLogo);
+
+function tappedOnMic() {
+    setTimeout(function() {
+        document.getElementById("searchBar").value = "";
+    }, 1000);
+    api.apps.launchApplication("com.google.OPA");
+}
+
+searchBarMicIcon.addEventListener("touchstart", tappedOnMic);
+
+if (config.dynamiccolorswitch == true) {
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setDynamicDarkBar();
+    } else {
+        setDynamicLightBar();
     }
 
-    searchBarIcon.addEventListener("touchstart", tappedOnLogo);
-
-    function tappedOnMic() {
-        setTimeout(function() {
-            document.getElementById("searchBar").value = "";
-        }, 1000);
-        api.apps.launchApplication("com.google.OPA");
-    }
-
-    searchBarMicIcon.addEventListener("touchstart", tappedOnMic);
-
-    if (config.dynamiccolorswitch == true) {
-
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    dynamicSearchBar = window.matchMedia("(prefers-color-scheme: dark)");
+    dynamicSearchBar.addListener(e => {
+        if (e.matches) {
             setDynamicDarkBar();
         } else {
             setDynamicLightBar();
         }
-
-        dynamicSearchBar = window.matchMedia("(prefers-color-scheme: dark)");
-        dynamicSearchBar.addListener(e => {
-            if (e.matches) {
-                setDynamicDarkBar();
-            } else {
-                setDynamicLightBar();
-            }
-        });
-    } else {
-        setDefaultBar();
-    }
-
-    searchBackground.style.webkitFilter = `opacity(${searchBarOpacity}%)`;
-    searchBackground.style.webkitBackdropFilter = `blur(${searchBarBlur}px)`;
-    searchBarIcon.src = base64SearchBarIcon;
-    searchBarMicIcon.src = base64SearchBarMicIcon;
-
+    });
+} else {
+    setDefaultBar();
 }
 
 function setDynamicLightBar() {
