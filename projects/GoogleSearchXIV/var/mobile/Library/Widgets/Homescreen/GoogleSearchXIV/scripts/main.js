@@ -9,8 +9,11 @@ var searchBarPlaceholderTextColor = config.searchbarplaceholdertextcolor.length 
 var searchBarIconColor = config.searchbariconcolor.length > 7 ? config.searchbariconcolor.substring(1, 7) : config.searchbariconcolor;
 var searchBarMicIconColor = config.searchbarmiciconcolor.length > 7 ? config.searchbarmiciconcolor.substring(1, 7) : config.searchbarmiciconcolor;
 //
-searchBarIcon.src = base64SearchBarIcon;
-searchBarMicIcon.src = base64SearchBarMicIcon;
+function loadLogos() {
+    searchBarIcon.src = base64SearchBarIcon;
+    searchBarMicIcon.src = base64SearchBarMicIcon;
+}
+loadLogos();
 //
 var dynamicSearchBar;
 var dynamicSearchBarLightBackgroundColor = config.lightsearchbarcolor.length > 7 ? config.lightsearchbarcolor.substring(0, 7) : config.lightsearchbarcolor;
