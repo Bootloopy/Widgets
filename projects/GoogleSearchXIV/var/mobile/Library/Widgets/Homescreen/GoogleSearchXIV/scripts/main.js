@@ -24,12 +24,17 @@ var dynamicDarkSearchBarMicIconColor = config.darksearchbarmiciconcolor.length >
 var searchBarOpacity = (config.searchbaropacity * Math.pow(10, 2));
 var searchBarBlur = (config.searchbarblur * Math.pow(10, 2)) / 10;
 
+window.onload = function() {
+    setSearchBar();
+    loadIcons();
+    setSearchBarOpacity();
+    setSearchBarBlur();
+}
+
 window.onkeyup = keyup;
 
-var inputTextValue;
-
 function keyup(e) {
-    inputTextValue = e.target.value;
+    var inputTextValue = e.target.value;
 
     if (e.keyCode == 13) {
         var correctValue = inputTextValue.replace(/\s+/g, '+');
@@ -58,24 +63,27 @@ function tappedOnMic() {
 
 searchBarMicIcon.addEventListener("touchstart", tappedOnMic);
 
-if (config.dynamiccolorswitch == true) {
+function setSearchBar() {
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setDynamicDarkBar();
-    } else {
-        setDynamicLightBar();
-    }
+    if (config.dynamiccolorswitch == true) {
 
-    dynamicSearchBar = window.matchMedia("(prefers-color-scheme: dark)");
-    dynamicSearchBar.addListener(e => {
-        if (e.matches) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             setDynamicDarkBar();
         } else {
             setDynamicLightBar();
         }
-    });
-} else {
-    setDefaultBar();
+
+        dynamicSearchBar = window.matchMedia("(prefers-color-scheme: dark)");
+        dynamicSearchBar.addListener(e => {
+            if (e.matches) {
+                setDynamicDarkBar();
+            } else {
+                setDynamicLightBar();
+            }
+        });
+    } else {
+        setDefaultBar();
+    }
 }
 
 function loadIcons() {
@@ -83,19 +91,13 @@ function loadIcons() {
     searchBarMicIcon.src = base64SearchBarMicIcon;
 }
 
-loadIcons();
-
 function setSearchBarOpacity() {
     searchBackground.style.webkitFilter = `opacity(${searchBarOpacity}%)`;
 }
 
-setSearchBarOpacity();
-
 function setSearchBarBlur() {
     searchBackground.style.webkitBackdropFilter = `blur(${searchBarBlur}px)`;
 }
-
-setSearchBarBlur();
 
 function setDynamicLightBar() {
     searchBackground.style.backgroundColor = dynamicSearchBarLightBackgroundColor;
