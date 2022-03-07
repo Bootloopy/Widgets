@@ -8,4 +8,4 @@ Architecture: iphoneos-arm
 Author: Bootloopy (IDAoADI) <>
 Maintainer: Bootloopy (IDAoADI) <>
 Depiction: https://bootloopy.github.io/depictions/projects/googlesearchxiv/index.html
-Icon: file:///Library/PreferenceBundles/GoogleSearchXIV.bundle/PackageIcon.png
+Icon: https://bootloopy.github.io/depictions/projects/googlesearchxiv/PackageIcon.png
