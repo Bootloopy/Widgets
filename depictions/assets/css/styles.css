@@ -71,11 +71,6 @@ a {
 	text-decoration: underline;
 }
 
-.content {
-	height: auto;
-	overflow: auto;
-}
-
 #log {
 	display: none;
 }
