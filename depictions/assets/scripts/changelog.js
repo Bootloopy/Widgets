@@ -27,7 +27,8 @@ function showLess() {
 	}, 100);
 	log.style.display = "none";
 	more.innerHTML = "More Versions";
-	window.document.body.style.height = height;
+	window.document.body.style.height = `${height}px`;
+	window.document.body.style.backgroundColor = "red";
 }
 
 more.addEventListener("click", toggle);
