@@ -6,4 +6,4 @@ function moreVersions() {
 	log.style.display = "block";
 }
 
-more.addEventListener("click", moreVersions);
+more.addEventListener("touchstart", moreVersions);
