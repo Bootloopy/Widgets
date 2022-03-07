@@ -1,7 +1,9 @@
 var more = document.getElementById("more");
+var log = document.getElementById("log");
 
 function moreVersions() {
-	window.location = "https://bootloopy.github.io/depictions/projects/googlesearchxiv/changelog.html";
+	more.style.display = "none";
+	log.style.display = "block";
 }
 
 more.addEventListener("click", moreVersions);
