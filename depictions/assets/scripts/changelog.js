@@ -1,8 +1,5 @@
 var more = document.getElementById("more");
 var log = document.getElementById("log");
-var body = document.body;
-var html = document.documentElement;
-var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 var status = 1;
 
 function toggle() {
@@ -27,8 +24,7 @@ function showLess() {
 	}, 100);
 	log.style.display = "none";
 	more.innerHTML = "More Versions";
-	window.document.body.style.height = `${height}px`;
-	window.document.body.style.backgroundColor = "red";
+	window.location.top = window.location.top;
 }
 
 more.addEventListener("click", toggle);
