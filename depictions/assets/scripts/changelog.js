@@ -24,7 +24,6 @@ function showLess() {
 	}, 100);
 	log.style.display = "none";
 	more.innerHTML = "More Versions";
-	window.location.top = window.location.top;
 }
 
 more.addEventListener("click", toggle);
