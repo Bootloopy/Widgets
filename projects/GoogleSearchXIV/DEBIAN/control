@@ -3,7 +3,7 @@ Version: 1.0.2
 Name: GoogleSearchXIV
 Section: Widgets
 Depends: firmware (>= 13.0)
-Description: A Google search widget for iOS 13.0-14.x.
+Description: A Google search widget for iOS 13.0-14.8.1
 Architecture: iphoneos-arm
 Author: Bootloopy
 Maintainer: Bootloopy

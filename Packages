@@ -4,12 +4,12 @@ Architecture: iphoneos-arm
 Maintainer: Bootloopy
 Depends: firmware (>= 13.0)
 Filename: ./debs/com.bootloopy.googlesearchxiv_1.0.2_iphoneos-arm.deb
-Size: 82590
-MD5sum: ca378943a059dcec02bcd41a84774442
-SHA1: cca01ed89edc40b7493f8fd7560d41bc2b501786
-SHA256: 7c76962922d3374dafb8edcdb857364dfad3d9a842b4dd6465e8619a3b5a1627
+Size: 82592
+MD5sum: 5437ad9c5b0173577b2fd647196ec93d
+SHA1: 47a8200903c0f8396d732888d25f026978af748c
+SHA256: 9f37a622242923240e628cf297e43aeadf4a28da3d89e65c037de449b142d92e
 Section: Widgets
-Description: A Google search widget for iOS 13.0-14.x.
+Description: A Google search widget for iOS 13.0-14.8.1
 Author: Bootloopy
 Depiction: https://bootloopy.github.io/depictions/projects/googlesearchxiv/index.html
 Icon: https://bootloopy.github.io/depictions/projects/googlesearchxiv/icon.png
