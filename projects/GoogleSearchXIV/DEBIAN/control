@@ -1,5 +1,5 @@
 Package: com.bootloopy.googlesearchxiv
-Version: 1.0.4
+Version: 1.0.5
 Name: GoogleSearchXIV
 Section: Widgets
 Depends: firmware (>= 13.0)
