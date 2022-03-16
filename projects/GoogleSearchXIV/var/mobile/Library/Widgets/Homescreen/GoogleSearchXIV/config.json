@@ -4,7 +4,7 @@
     "options": [
         {
             "type": "title",
-            "text": "Version 1.0.2"
+            "text": "Version 1.0.3"
         },
         {
             "type": "title",
@@ -59,18 +59,18 @@
         {
             "type": "switch",
             "default": "false",
-            "key": "usesearchbarmiciconcolor",
-            "text": "Custom Mic Icon Color"
+            "key": "usesearchbarassistanticoncolor",
+            "text": "Custom Google Assistant Icon Color"
         },
         {
             "type": "color",
             "default": "#000000",
-            "key": "searchbarmiciconcolor",
-            "text": "Mic Icon Color"
+            "key": "searchbarassistanticoncolor",
+            "text": "Google Assistant Icon Color"
         },
         {
             "type": "comment",
-            "text": "Change the color of the mic icon color."
+            "text": "Change the color of the Google Assistant icon color."
         },
         {
             "type": "page",
@@ -167,24 +167,24 @@
                 {
                     "type": "switch",
                     "default": "false",
-                    "key": "usedynamicsearchbarmiciconcolor",
-                    "text": "Dynamic Custom Mic Icon Color"
+                    "key": "usedynamicsearchbarassistanticoncolor",
+                    "text": "Dynamic Custom Assistant Icon Color"
                 },
                 {
                     "type": "color",
                     "default": "#000000",
-                    "key": "lightsearchbarmiciconcolor",
-                    "text": "Light Mic Icon Color"
+                    "key": "lightsearchbarassistanticoncolor",
+                    "text": "Light Google Assistant Icon Color"
                 },
                 {
                     "type": "color",
                     "default": "#000000",
-                    "key": "darksearchbarmiciconcolor",
-                    "text": "Dark Mic Icon Color"
+                    "key": "darksearchbarassistanticoncolor",
+                    "text": "Dark Google Assistant Icon Color"
                 },
                 {
                     "type": "comment",
-                    "text": "Change the color of the mic icon color."
+                    "text": "Change the color of the Google Assistant icon color."
                 },
             ]
         },
@@ -217,11 +217,11 @@
         },
         {
             "type": "comment",
-            "text": "* Tapping on the Google logo will open your default browser to Google."
+            "text": "* Tapping on the Google icon will open your default browser to Google."
         },
         {
             "type": "comment",
-            "text": "** In order to use the microphone, please make sure to download the Google Assistant app from the App Store."
+            "text": "** In order to tap on the Google Assistant icon, please make sure to download the Google Assistant app from the App Store."
         },
         {
             "type": "comment",

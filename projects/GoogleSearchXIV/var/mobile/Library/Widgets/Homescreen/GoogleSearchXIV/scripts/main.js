@@ -2,12 +2,12 @@
 var searchBar = document.getElementById("searchBar");
 var searchBackground = document.getElementById("searchBackground");
 var searchBarIcon = document.getElementById("searchBarIcon");
-var searchBarMicIcon = document.getElementById("searchBarMicIcon");
+var searchBarAssistantIcon = document.getElementById("searchBarAssistantIcon");
 var searchBarBackgroundColor = config.searchbarcolor.length > 7 ? config.searchbarcolor.substring(0, 7) : config.searchbarcolor;
 var searchBarTextColor = config.searchbartextcolor.length > 7 ? config.searchbartextcolor.substring(0, 7) : config.searchbartextcolor;
 var searchBarPlaceholderTextColor = config.searchbarplaceholdertextcolor.length > 7 ? config.searchbarplaceholdertextcolor.substring(0, 7) : config.searchbarplaceholdertextcolor;
 var searchBarIconColor = config.searchbariconcolor.length > 7 ? config.searchbariconcolor.substring(1, 7) : config.searchbariconcolor;
-var searchBarMicIconColor = config.searchbarmiciconcolor.length > 7 ? config.searchbarmiciconcolor.substring(1, 7) : config.searchbarmiciconcolor;
+var searchBarAssistantIconColor = config.searchbarassistanticoncolor.length > 7 ? config.searchbarassistanticoncolor.substring(1, 7) : config.searchbarassistanticoncolor;
 //
 var dynamicSearchBar;
 var dynamicSearchBarLightBackgroundColor = config.lightsearchbarcolor.length > 7 ? config.lightsearchbarcolor.substring(0, 7) : config.lightsearchbarcolor;
@@ -18,8 +18,8 @@ var dynamicSearchBarLightPlaceholderTextColor = config.lightsearchbarplaceholder
 var dynamicSearchBarDarkPlaceholderTextColor = config.darksearchbarplaceholdertextcolor.length > 7 ? config.darksearchbarplaceholdertextcolor.substring(0, 7) : config.darksearchbarplaceholdertextcolor;
 var dynamicLightSearchBarIconColor = config.lightsearchbariconcolor.length > 7 ? config.lightsearchbariconcolor.substring(1, 7) : config.lightsearchbariconcolor;
 var dynamicDarkSearchBarIconColor = config.darksearchbariconcolor.length > 7 ? config.darksearchbariconcolor.substring(1, 7) : config.darksearchbariconcolor;
-var dynamicLightSearchBarMicIconColor = config.lightsearchbarmiciconcolor.length > 7 ? config.lightsearchbarmiciconcolor.substring(1, 7) : config.lightsearchbarmiciconcolor;
-var dynamicDarkSearchBarMicIconColor = config.darksearchbarmiciconcolor.length > 7 ? config.darksearchbarmiciconcolor.substring(1, 7) : config.darksearchbarmiciconcolor;
+var dynamicLightSearchBarAssistantIconColor = config.lightsearchbarassistanticoncolor.length > 7 ? config.lightsearchbarassistanticoncolor.substring(1, 7) : config.lightsearchbarassistanticoncolor;
+var dynamicDarkSearchBarAssistantIconColor = config.darksearchbarassistanticoncolor.length > 7 ? config.darksearchbarassistanticoncolor.substring(1, 7) : config.darksearchbarassistanticoncolor;
 //
 var searchBarOpacity = (config.searchbaropacity * Math.pow(10, 2));
 var searchBarBlur = (config.searchbarblur * Math.pow(10, 2)) / 10;
@@ -54,14 +54,14 @@ function tappedOnLogo() {
 
 searchBarIcon.addEventListener("touchstart", tappedOnLogo);
 
-function tappedOnMic() {
+function tappedOnAssistant() {
     setTimeout(function() {
         document.getElementById("searchBar").value = "";
     }, 1000);
     api.apps.launchApplication("com.google.OPA");
 }
 
-searchBarMicIcon.addEventListener("touchstart", tappedOnMic);
+searchBarAssistantIcon.addEventListener("touchstart", tappedOnAssistant);
 
 function setSearchBar() {
 
@@ -88,7 +88,7 @@ function setSearchBar() {
 
 function loadIcons() {
     searchBarIcon.src = base64SearchBarIcon;
-    searchBarMicIcon.src = base64SearchBarMicIcon;
+    searchBarAssistantIcon.src = base64SearchBarAssistantIcon;
 }
 
 function setSearchBarOpacity() {
@@ -112,12 +112,12 @@ function setDynamicLightBar() {
         searchBarIcon.src = base64SearchBarIcon;
     }
 
-    if (config.usedynamicsearchbarmiciconcolor == true) {
+    if (config.usedynamicsearchbarassistanticoncolor == true) {
         setTimeout(function() {
-            setLightSearchBarMicIconColor();
+            setLightSearchBarAssistantIconColor();
         }, 100);
     } else {
-        searchBarMicIcon.src = base64SearchBarMicIcon;
+        searchBarAssistantIcon.src = base64SearchBarAssistantIcon;
     }
 }
 
@@ -134,12 +134,12 @@ function setDynamicDarkBar() {
         searchBarIcon.src = base64SearchBarIcon;
     }
 
-    if (config.usedynamicsearchbarmiciconcolor == true) {
+    if (config.usedynamicsearchbarassistanticoncolor == true) {
         setTimeout(function() {
-            setDarkSearchBarMicIconColor();
+            setDarkSearchBarAssistantIconColor();
         }, 100);
     } else {
-        searchBarMicIcon.src = base64SearchBarMicIcon;
+        searchBarAssistantIcon.src = base64SearchBarAssistantIcon;
     }
 }
 
@@ -156,12 +156,12 @@ function setDefaultBar() {
         searchBarIcon.src = base64SearchBarIcon;
     }
 
-    if (config.usesearchbarmiciconcolor == true) {
+    if (config.usesearchbarassistanticoncolor == true) {
         setTimeout(function() {
-            setSearchBarMicIconColor();
+            setSearchBarAssistantIconColor();
         }, 100);
     } else {
-        searchBarMicIcon.src = base64SearchBarMicIcon;
+        searchBarAssistantIcon.src = base64SearchBarAssistantIcon;
     }
 }
 
@@ -200,8 +200,8 @@ function setSearchBarIconColor() {
     searchBarIcon.src = canvas.toDataURL("image/png");
 }
 
-function setSearchBarMicIconColor() {
-    var color = ("0x" + searchBarMicIconColor);
+function setSearchBarAssistantIconColor() {
+    var color = ("0x" + searchBarAssistantIconColor);
     var {
         red,
         green,
@@ -210,10 +210,10 @@ function setSearchBarMicIconColor() {
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext("2d");
     canvas.width = 500;
-    canvas.height = 717;
-    image = searchBarMicIcon;
+    canvas.height = 478;
+    image = searchBarAssistantIcon;
     ctx.drawImage(image, 0, 0);
-    var imageData = ctx.getImageData(0, 0, 500, 717),
+    var imageData = ctx.getImageData(0, 0, 500, 478),
         picture = imageData.data,
         rgb = [red, green, blue];
 
@@ -224,7 +224,7 @@ function setSearchBarMicIconColor() {
     }
 
     ctx.putImageData(imageData, 0, 0);
-    searchBarMicIcon.src = canvas.toDataURL("image/png");
+    searchBarAssistantIcon.src = canvas.toDataURL("image/png");
 }
 
 function setLightSearchBarIconColor() {
@@ -254,8 +254,8 @@ function setLightSearchBarIconColor() {
     searchBarIcon.src = canvas.toDataURL("image/png");
 }
 
-function setLightSearchBarMicIconColor() {
-    var color = ("0x" + dynamicLightSearchBarMicIconColor);
+function setLightSearchBarAssistantIconColor() {
+    var color = ("0x" + dynamicLightSearchBarAssistantIconColor);
     var {
         red,
         green,
@@ -264,10 +264,10 @@ function setLightSearchBarMicIconColor() {
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext("2d");
     canvas.width = 500;
-    canvas.height = 717;
-    image = searchBarMicIcon;
+    canvas.height = 478;
+    image = searchBarAssistantIcon;
     ctx.drawImage(image, 0, 0);
-    var imageData = ctx.getImageData(0, 0, 500, 717),
+    var imageData = ctx.getImageData(0, 0, 500, 478),
         picture = imageData.data,
         rgb = [red, green, blue];
 
@@ -278,7 +278,7 @@ function setLightSearchBarMicIconColor() {
     }
 
     ctx.putImageData(imageData, 0, 0);
-    searchBarMicIcon.src = canvas.toDataURL("image/png");
+    searchBarAssistantIcon.src = canvas.toDataURL("image/png");
 }
 
 function setDarkSearchBarIconColor() {
@@ -308,8 +308,8 @@ function setDarkSearchBarIconColor() {
     searchBarIcon.src = canvas.toDataURL("image/png");
 }
 
-function setDarkSearchBarMicIconColor() {
-    var color = ("0x" + dynamicDarkSearchBarMicIconColor);
+function setDarkSearchBarAssistantIconColor() {
+    var color = ("0x" + dynamicDarkSearchBarAssistantIconColor);
     var {
         red,
         green,
@@ -318,10 +318,10 @@ function setDarkSearchBarMicIconColor() {
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext("2d");
     canvas.width = 500;
-    canvas.height = 717;
-    image = searchBarMicIcon;
+    canvas.height = 478;
+    image = searchBarAssistantIcon;
     ctx.drawImage(image, 0, 0);
-    var imageData = ctx.getImageData(0, 0, 500, 717),
+    var imageData = ctx.getImageData(0, 0, 500, 478),
         picture = imageData.data,
         rgb = [red, green, blue];
 
@@ -332,5 +332,5 @@ function setDarkSearchBarMicIconColor() {
     }
 
     ctx.putImageData(imageData, 0, 0);
-    searchBarMicIcon.src = canvas.toDataURL("image/png");
+    searchBarAssistantIcon.src = canvas.toDataURL("image/png");
 }
