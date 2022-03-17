@@ -210,10 +210,10 @@ function setSearchBarAssistantIconColor() {
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext("2d");
     canvas.width = 500;
-    canvas.height = 478;
+    canvas.height = 500;
     image = searchBarAssistantIcon;
     ctx.drawImage(image, 0, 0);
-    var imageData = ctx.getImageData(0, 0, 500, 478),
+    var imageData = ctx.getImageData(0, 0, 500, 500),
         picture = imageData.data,
         rgb = [red, green, blue];
 
@@ -264,10 +264,10 @@ function setLightSearchBarAssistantIconColor() {
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext("2d");
     canvas.width = 500;
-    canvas.height = 478;
+    canvas.height = 500;
     image = searchBarAssistantIcon;
     ctx.drawImage(image, 0, 0);
-    var imageData = ctx.getImageData(0, 0, 500, 478),
+    var imageData = ctx.getImageData(0, 0, 500, 500),
         picture = imageData.data,
         rgb = [red, green, blue];
 
@@ -318,10 +318,10 @@ function setDarkSearchBarAssistantIconColor() {
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext("2d");
     canvas.width = 500;
-    canvas.height = 478;
+    canvas.height = 500;
     image = searchBarAssistantIcon;
     ctx.drawImage(image, 0, 0);
-    var imageData = ctx.getImageData(0, 0, 500, 478),
+    var imageData = ctx.getImageData(0, 0, 500, 500),
         picture = imageData.data,
         rgb = [red, green, blue];
 
