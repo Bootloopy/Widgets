@@ -1,4 +1,5 @@
 // GooglesearchXIV by Bootloopy
+var searchBarContainer = document.getElementById("searchBarContainer");
 var searchBar = document.getElementById("searchBar");
 var searchBackground = document.getElementById("searchBackground");
 var searchBarIcon = document.getElementById("searchBarIcon");
@@ -29,6 +30,8 @@ window.onload = function() {
     loadIcons();
     setSearchBarOpacity();
     setSearchBarBlur();
+    smallDeviceCompatibility();
+    gracefulLoad();
 }
 
 window.onkeyup = keyup;
@@ -97,6 +100,24 @@ function setSearchBarOpacity() {
 
 function setSearchBarBlur() {
     searchBackground.style.webkitBackdropFilter = `blur(${searchBarBlur}px)`;
+}
+
+function smallDeviceCompatibility() {
+	api.system.observeData(function (newData) {
+        if (newData.deviceModel == "iPhone8,4" || newData.deviceModel == "iPhone6,1" || newData.deviceModel == "iPhone6,2") {
+            searchBar.style.width = "200px";
+            searchBackground.style.paddingTop = "23px";
+            searchBackground.style.paddingBottom = "23px";
+            searchBackground.style.paddingLeft = "85px";
+            searchBackground.style.paddingRight = "85px";
+            searchBarIcon.style.left = "7.5%";
+            searchBarAssistantIcon.style.left = "92.5%";
+        }
+	});
+}
+
+function gracefulLoad() {
+    searchBarContainer.style.opacity = "1.0";
 }
 
 function setDynamicLightBar() {
