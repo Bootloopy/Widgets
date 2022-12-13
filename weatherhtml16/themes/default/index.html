@@ -1,0 +1,95 @@
+<!DOCTYPE HtML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        window.onload = () => {
+            var canvas1 = document.createElement("canvas");
+            canvas1.setAttribute("id", "canvas1");
+            canvas1.style.display = "none";
+            document.body.appendChild(canvas1);
+
+            var canvas2 = document.createElement("canvas");
+            canvas2.setAttribute("id", "canvas2");
+            canvas2.style.display = "none";
+            document.body.appendChild(canvas2);
+
+            var canvas3 = document.createElement("canvas");
+            canvas3.setAttribute("id", "canvas3");
+            document.body.appendChild(canvas3);
+
+            var textBox = document.createElement("p");
+            textBox.setAttribute("id", "textbox");
+            document.body.appendChild(textBox);
+
+            var userImage = document.createElement("img");
+            userImage.setAttribute("id", "userImage");
+            userImage.src = "data:image/jpeg;base64, !wallpaper";
+            userImage.style.display = "none";
+            document.body.appendChild(userImage);
+
+            var weatherImage = document.createElement("img");
+            weatherImage.setAttribute("id", "weatherImage");
+            weatherImage.src = "data:image/png;base64, !icon";
+            weatherImage.style.display = "none";
+            document.body.appendChild(weatherImage);
+
+            var img1 = new Image();
+            img1 = document.getElementById("userImage");
+
+            var img2 = document.getElementById("weatherImage");
+
+            img1.onload = () => {
+                var canvas1 = document.getElementById("canvas1");
+                var ctx1 = canvas1.getContext("2d");
+                canvas1.height = screen.height * 3;
+                canvas1.width = screen.width * 3;
+                ctx1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
+                var grd = ctx1.createLinearGradient(0, 0, canvas1.width, canvas1.height);
+                grd.addColorStop(1, "rgba(0, 0, 0, 0.0)");
+                grd.addColorStop(0, "rgba(0, 0, 0, 0.6)");
+                ctx1.fillStyle = grd;
+                ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
+                ctx1.font = "90px -apple-system, BlinkMacSystemFont, sans-serif";
+                ctx1.fillStyle = "white";
+                ctx1.textAlign = "center";
+                ctx1.fillText("!temperature", canvas1.width / 2, canvas1.height - 580 * 3);
+                ctx1.fillText("!condition", canvas1.width / 2, canvas1.height - 540 * 3);
+                //
+                //
+                //
+                var canvas2 = document.getElementById("canvas2");
+                var ctx2 = canvas2.getContext("2d");
+                canvas2.height = screen.height * 3;
+                canvas2.width = screen.width * 3;
+                weatherImageHeight = img2.height;
+                weatherImageWidth = img2.width;
+                ctx2.imageSmoothingEnabled = true;
+                ctx2.drawImage(img2, (canvas2.width / 2) - (weatherImageWidth / 2), canvas2.height - 520 * 3, weatherImageWidth, weatherImageHeight);
+                //
+                //
+                //
+                var canvas3 = document.getElementById("canvas3");
+                var ctx3 = canvas3.getContext("2d");
+                canvas3.height = screen.height * 3;
+                canvas3.width = screen.width * 3;
+                ctx3.drawImage(canvas1, 0, 0);
+                ctx3.drawImage(canvas2, 0, 0);
+                //
+                //
+                //
+                var dataURL = canvas3.toDataURL("image/jpeg", 1.0);
+                var paste = document.getElementById("textbox");
+                var fixDataURL = dataURL.replace('data:', '').replace(/^.+,/, '');
+
+                paste.innerText = fixDataURL;
+            };
+        };
+    </script>
+</body>
+
+</html>
