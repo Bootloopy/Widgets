@@ -17,18 +17,17 @@
 </head>
 
 <body>
-    <img id="wallpaper" />
-    <img id="icon" />
+    <img id="wallpaper" src="data:image/jpeg;base64, !wallpaper" />
+    <img id="icon" src="data:image/png;base64, !icon" />
     <canvas id="canvas1"></canvas>
     <canvas id="canvas2"></canvas>
     <canvas id="canvas3"></canvas>
     <p id="output"></p>
     <script>
         window.onload = () => {
-
                 var canvas1 = document.getElementById("canvas1");
                 var ctx1 = canvas1.getContext("2d");
-                var img1 = document.getElementById("wallpaper").setAttribute("src", "data:image/jpeg;base64, !wallpaper");
+                img1 = document.getElementById("wallpaper");
                 canvas1.width = screen.width * 3;
                 canvas1.height = screen.height * 3;
                 ctx1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
@@ -47,7 +46,7 @@
                 //
                 var canvas2 = document.getElementById("canvas2");
                 var ctx2 = canvas2.getContext("2d");
-                var img2 = document.getElementById("icon").setAttribute("src", "data:image/png;base64, !icon");
+                var img2 = document.getElementById("icon");
                 canvas2.height = screen.height * 3;
                 canvas2.width = screen.width * 3;
                 iconWidth = img2.width;
