@@ -17,8 +17,8 @@
 </head>
 
 <body>
-    <img id="wallpaper" src="data:image/jpeg;base64, !wallpaper" />
-    <img id="icon" src="data:image/png;base64, !icon" />
+    <img id="wallpaper" />
+    <img id="icon" />
     <canvas id="canvas1"></canvas>
     <canvas id="canvas2"></canvas>
     <canvas id="canvas3"></canvas>
@@ -27,14 +27,16 @@
         window.onload = () => {
             var img1 = new Image();
             img1 = document.getElementById("wallpaper");
+            img1.setAttribute("src", "data:image/png;base64, !wallpaper");
 
             var img2 = document.getElementById("icon");
+            img2.setAttribute("src", "data:image/png;base64, !icon");
 
             img1.onload = () => {
                 var canvas1 = document.getElementById("canvas1");
                 var ctx1 = canvas1.getContext("2d");
-                canvas1.height = screen.height * 3;
                 canvas1.width = screen.width * 3;
+                canvas1.height = screen.height * 3;
                 ctx1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
                 var grd = ctx1.createLinearGradient(0, 0, canvas1.width, canvas1.height);
                 grd.addColorStop(1, "rgba(0, 0, 0, 0.0)");
@@ -53,17 +55,17 @@
                 var ctx2 = canvas2.getContext("2d");
                 canvas2.height = screen.height * 3;
                 canvas2.width = screen.width * 3;
-                weatherImageHeight = img2.height;
-                weatherImageWidth = img2.width;
+                iconWidth = img2.width;
+                iconHeight = img2.height;
                 ctx2.imageSmoothingEnabled = true;
-                ctx2.drawImage(img2, (canvas2.width / 2) - (weatherImageWidth / 2), canvas2.height - 520 * 3, weatherImageWidth, weatherImageHeight);
+                ctx2.drawImage(img2, (canvas2.width / 2) - (iconWidth / 2), canvas2.height - 520 * 3, iconWidth, iconHeight);
                 //
                 //
                 //
                 var canvas3 = document.getElementById("canvas3");
                 var ctx3 = canvas3.getContext("2d");
-                canvas3.height = screen.height * 3;
                 canvas3.width = screen.width * 3;
+                canvas3.height = screen.height * 3;
                 ctx3.drawImage(canvas1, 0, 0);
                 ctx3.drawImage(canvas2, 0, 0);
                 //
