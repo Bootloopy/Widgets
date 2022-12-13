@@ -1,3 +1,14 @@
+<!--WeatherHTML16 Default Theme-->
+<!--Version. 1.0.1-->
+<!---->
+<!--How to code for WeatherHTML16-->
+<!--There are various callouts in the code that have an exclamation mark (!) before them.-->
+<!--These include: wallpaper, icon, temperature, and condition.-->
+<!--These will get replaced with the various data collected when running the shortcut.-->
+<!--If you change the callouts in the code, you must also change them in the shortcut.-->
+<!---->
+<!--This only works with the <canvas> element currently.-->
+<!---->
 <!DOCTYPE HtML>
 <html>
 
@@ -6,42 +17,18 @@
 </head>
 
 <body>
+    <img id="wallpaper" src="data:image/jpeg;base64, !wallpaper" />
+    <img id="icon" src="data:image/png;base64, !icon" />
+    <canvas id="canvas1"></canvas>
+    <canvas id="canvas2"></canvas>
+    <canvas id="canvas3"></canvas>
+    <p id="output"></p>
     <script>
         window.onload = () => {
-            var canvas1 = document.createElement("canvas");
-            canvas1.setAttribute("id", "canvas1");
-            canvas1.style.display = "none";
-            document.body.appendChild(canvas1);
-
-            var canvas2 = document.createElement("canvas");
-            canvas2.setAttribute("id", "canvas2");
-            canvas2.style.display = "none";
-            document.body.appendChild(canvas2);
-
-            var canvas3 = document.createElement("canvas");
-            canvas3.setAttribute("id", "canvas3");
-            document.body.appendChild(canvas3);
-
-            var textBox = document.createElement("p");
-            textBox.setAttribute("id", "textbox");
-            document.body.appendChild(textBox);
-
-            var userImage = document.createElement("img");
-            userImage.setAttribute("id", "userImage");
-            userImage.src = "data:image/jpeg;base64, !wallpaper";
-            userImage.style.display = "none";
-            document.body.appendChild(userImage);
-
-            var weatherImage = document.createElement("img");
-            weatherImage.setAttribute("id", "weatherImage");
-            weatherImage.src = "data:image/png;base64, !icon";
-            weatherImage.style.display = "none";
-            document.body.appendChild(weatherImage);
-
             var img1 = new Image();
-            img1 = document.getElementById("userImage");
+            img1 = document.getElementById("wallpaper");
 
-            var img2 = document.getElementById("weatherImage");
+            var img2 = document.getElementById("icon");
 
             img1.onload = () => {
                 var canvas1 = document.getElementById("canvas1");
@@ -83,10 +70,9 @@
                 //
                 //
                 var dataURL = canvas3.toDataURL("image/jpeg", 1.0);
-                var paste = document.getElementById("textbox");
+                var output = document.getElementById("output");
                 var fixDataURL = dataURL.replace('data:', '').replace(/^.+,/, '');
-
-                paste.innerText = fixDataURL;
+                output.innerText = fixDataURL;
             };
         };
     </script>
